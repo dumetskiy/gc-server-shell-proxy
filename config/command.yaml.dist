@@ -1,0 +1,14 @@
+test_command:
+  executable: 'test.sh'
+  return_stdout: true
+  arguments_reflection: '{directory} {filename}'
+  arguments:
+    directory:
+      required: true
+      type: string
+    filename:
+      required: false
+      type: boolean
+    numeric:
+      required: false
+      type: integer

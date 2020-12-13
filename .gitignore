@@ -1,1 +1,4 @@
 vendor
+executable/*
+!executable/test.sh
+config/command.yaml
