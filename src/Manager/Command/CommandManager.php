@@ -33,7 +33,10 @@ class CommandManager
         $this->commandExecutor = new CommandExecutor();
     }
 
-    public function manageRequest()
+    /**
+     * @return string|null
+     */
+    public function manageRequest(): ?string
     {
         $requestedCommand = $this->commandLoader->getCommandByHandle(
             $this->requestManager->getQueryParam(QueryParam::COMMAND)

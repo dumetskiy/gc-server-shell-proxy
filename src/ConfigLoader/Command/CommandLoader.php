@@ -31,11 +31,19 @@ class CommandLoader
         return (new CommandFactory())->createCommand($commandName, $commandsConfigData[$commandName]);
     }
 
+    /**
+     * @return array
+     */
     private function loadCommandConfigFileData(): array
     {
        return spyc_load_file($this->generateYamlFilePath('command.yaml'));
     }
 
+    /**
+     * @param string $fileName
+     *
+     * @return string
+     */
     private function generateYamlFilePath(string $fileName): string
     {
         return sprintf('%s/config/%s', $_SERVER['DOCUMENT_ROOT'], $fileName);
