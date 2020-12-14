@@ -10,7 +10,7 @@ try {
         'success' => true,
         'data' => (new CommandManager())->manageRequest(),
     ]);
-} catch (\Exception $exception) {
+} catch (\Throwable $exception) {
     echo json_encode([
         'success' => false,
         'message' => sprintf('An exception was thrown: %s', $exception->getMessage()),
