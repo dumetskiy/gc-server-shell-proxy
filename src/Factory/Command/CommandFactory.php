@@ -34,7 +34,7 @@ class CommandFactory
             $commandArgument = CommandArgumentFactoryProvider::getFactoryForArgumentType($argumentConfiguration['type'])
                 ->createCommandArgument($argumentName, $argumentConfiguration);
 
-            var_dump(CommandArgumentFactoryProvider::getFactoryForArgumentType($argumentConfiguration['type']));die;
+            var_dump('x', CommandArgumentFactoryProvider::getFactoryForArgumentType($argumentConfiguration['type']));die;
 
             if (!$commandArgument instanceof AbstractCommandArgumentDTO) {
                 continue;
