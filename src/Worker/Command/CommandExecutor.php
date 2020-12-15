@@ -17,6 +17,7 @@ class CommandExecutor
     public function executeCommand(CommandDTO $commandDTO): ?string
     {
         $commandValue = CommandDataGenerator::generateCommandExecutionQuery($commandDTO);
+        var_dump($commandValue);die;
         $executionResult = shell_exec($commandValue);
 
         return $commandDTO->isReturnStdOut() ? $executionResult : null;
