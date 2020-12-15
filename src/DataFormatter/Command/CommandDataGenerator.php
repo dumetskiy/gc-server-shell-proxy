@@ -23,7 +23,6 @@ class CommandDataGenerator
         $commandArgumentsReflectionReplaceMapTo = [];
 
         foreach ($commandDTO->getArguments() as $argumentDTO) {
-            var_dump($argumentDTO);die;
             $commandArgumentsReflectionReplaceMapFrom[] = sprintf(self::COMMAND_ARGUMENT_TEMPLATE, $argumentDTO->getName());
             $commandArgumentsReflectionReplaceMapTo[] = $argumentDTO->getFormattedForShellValue();
         }
