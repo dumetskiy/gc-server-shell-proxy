@@ -9,6 +9,6 @@ class StringCommandArgumentDTO extends AbstractCommandArgumentDTO
      */
     public function getFormattedForShellValue(): string
     {
-        return $this->getValue();
+        return urldecode($this->getValue());
     }
 }
