@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace GamersClub\ServerShellProxy\Factory\Command\Argument;
 
 use GamersClub\ServerShellProxy\DTO\Command\AbstractCommandArgumentDTO;
-use GamersClub\ServerShellProxy\DTO\Command\BooleanCommandArgumentDTO;
+use GamersClub\ServerShellProxy\DTO\Command\StringCommandArgumentDTO;
 
 class StringCommandArgumentFactory extends AbstractCommandArgumentFactory
 {
@@ -14,7 +14,7 @@ class StringCommandArgumentFactory extends AbstractCommandArgumentFactory
      */
     protected function getCommandInstance(): AbstractCommandArgumentDTO
     {
-        return new BooleanCommandArgumentDTO();
+        return new StringCommandArgumentDTO();
     }
 
     /**
