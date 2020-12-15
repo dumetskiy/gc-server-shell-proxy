@@ -8,7 +8,7 @@ use GamersClub\ServerShellProxy\DTO\Command\CommandDTO;
 
 class CommandDataGenerator
 {
-    private const COMMAND_TEMPLATE = '%s %s > log.txt';
+    private const COMMAND_TEMPLATE = '%s %s';
     private const EXECUTABLE_PATH_FORMAT = '%s/executable/%s';
     private const COMMAND_ARGUMENT_TEMPLATE = '{%s}';
 
