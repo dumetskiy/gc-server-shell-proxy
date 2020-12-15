@@ -2,8 +2,6 @@
 
 namespace GamersClub\ServerShellProxy\DTO\Command;
 
-use GamersClub\ServerShellProxy\DTO\Command\AbstractCommandArgumentDTO;
-
 class StringCommandArgumentDTO extends AbstractCommandArgumentDTO
 {
     /**
@@ -11,6 +9,6 @@ class StringCommandArgumentDTO extends AbstractCommandArgumentDTO
      */
     public function getFormattedForShellValue(): string
     {
-        return sprintf('"%s"', $this->getValue());
+        return $this->getValue();
     }
 }
