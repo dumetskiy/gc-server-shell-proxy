@@ -29,7 +29,6 @@ class CommandArgumentFactoryProvider
         if (!isset(static::$argumentTypeFactoryMap[$argumentType])) {
             throw CommandArgumentTypeFactoryNotFoundException::createFromCommandArgumentTypeName($argumentType);
         }
-        var_dump($argumentType);die;
 
         return new static::$argumentTypeFactoryMap[$argumentType];
     }
